@@ -21,7 +21,8 @@ your volume mount (from the example above that would be `/data/dropbox/logs/`)
 you should see a message like:
 ```
 This computer isn't linked to any Dropbox account...
-Please visit https://www.dropbox.com/cli_link_nonce?nonce=90084227dc5340d88136f436c5be18fb to link this device.
+Please visit https://www.dropbox.com/cli_link_nonce?nonce=90084227dc5340d88136f436c5be18fb
+to link this device.
 ```
 
 Simply copy that link into your browser and complete the linking process. After
@@ -30,9 +31,10 @@ you've done this the first time, subsequent runs shouldn't prompt you for this.
 
 Help
 ---
-If you see this warning warning when running tahis container...
+If you see this warning warning when running this container...
 ```
-WARNING: Your kernel does not support swap limit capabilities, memory limited without swap.
+WARNING: Your kernel does not support swap limit capabilities, memory limited
+without swap.
 ```
 
 Check out the "Adjust memory and swap accounting" section of the Docker
