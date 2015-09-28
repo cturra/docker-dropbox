@@ -18,8 +18,7 @@ COPY conf/dropboxd.conf /etc/supervisor/conf.d/dropboxd.conf
 RUN wget -O /tmp/dropbox.tgz \
          -q https://www.dropbox.com/download?plat=lnx.x${ARCH} && \
     tar -zxf /tmp/dropbox.tgz -C /root/ && \
-    rm -f /tmp/dropbox.tgz && \
-    mkdir -p /dropbox/logs/supervisor
+    rm -f /tmp/dropbox.tgz
 
 # kick off supervisord+dropbox
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/dropboxd.conf"]

@@ -40,7 +40,8 @@ Note that the container expects /dropbox to look like this:
 You can use the following command as an example to create this structure:
 
 ```
-mkdir -p /data/dropbox/Dropbox /data/dropbox/logs/supervisor
+mkdir -p /data/dropbox/Dropbox
+mkdir -p /data/dropbox/logs/supervisor
 ```
 
 Help
