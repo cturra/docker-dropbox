@@ -28,11 +28,11 @@ to link this device.
 Simply copy that link into your browser and complete the linking process. After
 you've done this the first time, subsequent runs shouldn't prompt you for this.
 
-Note that the container expects /docker to look like this:
+Note that the container expects /dropbox to look like this:
 
 ```
 ├── dropbox
-│   ├── Dropbox
+│   ├── Dropbox [ If you have a pre-existing Dropbox directory, you can move it here. ]
 │   └── logs
 │       └── supervisor
 ```
