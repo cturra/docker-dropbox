@@ -20,5 +20,5 @@ RUN wget -O /tmp/dropbox.tgz \
     tar -zxf /tmp/dropbox.tgz -C /root/ && \
     rm -f /tmp/dropbox.tgz
 
-# kick off supervisord+plex
+# kick off supervisord+dropbox
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/dropboxd.conf"]
