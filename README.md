@@ -28,6 +28,20 @@ to link this device.
 Simply copy that link into your browser and complete the linking process. After
 you've done this the first time, subsequent runs shouldn't prompt you for this.
 
+Note that the container expects /docker to look like this:
+
+```
+├── dropbox
+│   ├── Dropbox
+│   └── logs
+│       └── supervisor
+```
+
+You can use the following command as an example to create this structure:
+
+```
+mkdir -p /data/dropbox/Dropbox /data/dropbox/logs/supervisor
+```
 
 Help
 ---
