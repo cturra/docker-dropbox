@@ -20,5 +20,9 @@ RUN wget -O /tmp/dropbox.tgz \
     tar -zxf /tmp/dropbox.tgz -C /root/ && \
     rm -f /tmp/dropbox.tgz
 
+# download the Dropbox python management script
+RUN wget -O /root/dropbox.py \
+         -q http://www.dropbox.com/download?dl=packages/dropbox.py
+
 # kick off supervisord+dropbox
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/dropboxd.conf"]
