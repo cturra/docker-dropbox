@@ -2,6 +2,7 @@ About this container
 ---
 [![Docker Build Status](https://img.shields.io/docker/build/cturra/dropbox.svg)]()
 [![Docker Pulls](https://img.shields.io/docker/pulls/cturra/dropbox.svg)]()
+[![Apache licensed](https://img.shields.io/badge/license-Apache-blue.svg)](https://raw.githubusercontent.com/cturra/docker-dropbox/badges/LICENSE)
 
 This container runs the Dropbox Linux client. More about Dropbox can be found at:
 
