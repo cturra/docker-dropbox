@@ -1,10 +1,9 @@
-<p align="center">
-  <img src="https://img.shields.io/docker/build/cturra/dropbox.svg" /> &nbsp;
-  <img src="https://img.shields.io/docker/pulls/cturra/dropbox.svg" />
-</p>
-
 About this container
 ---
+[![Docker Build Status](https://img.shields.io/docker/build/cturra/dropbox.svg)](https://hub.docker.com/r/cturra/dropbox/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/cturra/dropbox.svg)](https://hub.docker.com/r/cturra/dropbox/)
+[![Apache licensed](https://img.shields.io/badge/license-Apache-blue.svg)](https://raw.githubusercontent.com/cturra/docker-dropbox/badges/LICENSE)
+
 This container runs the Dropbox Linux client. More about Dropbox can be found at:
 
   https://www.dropbox.com
