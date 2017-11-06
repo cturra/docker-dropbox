@@ -1,7 +1,7 @@
 #!/bin/bash
 
-IMAGE_NAME="cturra/dropbox"
-CONTAINER_NAME="dropbox"
+# grab global variables
+source vars
 
 DOCKER=$(which docker)
 
@@ -12,8 +12,13 @@ function check_container() {
 
 # function to start new docker container
 function start_container() {
-  $DOCKER run --name=${CONTAINER_NAME} --restart=always --memory=512m --net=host \
-    -v /data/dropbox:/dropbox:rw -d ${IMAGE_NAME}:latest > /dev/null
+  $DOCKER run --name=${CONTAINER_NAME}                     \
+              --restart=always                             \
+              --detach=true                                \
+              --memory=${MEMORY_LIMIT}                     \
+              --net=host                                   \
+              --volume=${EXT_DROPBOX_DATA_DIR}:/dropbox:rw \
+              ${IMAGE_NAME}:latest > /dev/null
 }
 
 # check if docker container with same name is already running.

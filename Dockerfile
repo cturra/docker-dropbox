@@ -1,9 +1,7 @@
-FROM debian:jessie
-
-MAINTAINER chris turra <cturra@gmail.com>
+FROM debian:stretch
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV DROPBOX_VERSION 30.4.23
+ENV DROPBOX_VERSION 38.4.27
 ENV ARCH            86_64
 
 RUN apt-get -q update               \
@@ -12,7 +10,7 @@ RUN apt-get -q update               \
                        wget         \
  && rm -rf /var/lib/apt/lists/*
 
-COPY conf/dropboxd.conf /etc/supervisor/conf.d/dropboxd.conf
+COPY assets/dropboxd.conf /etc/supervisor/conf.d/dropboxd.conf
 
 # download and install dropbox (headless)
 # more details about this installation at:

@@ -1,0 +1,15 @@
+#
+# this file contains a number of global variables used
+# by the docker container and its scripts. update any
+# of these to be appropriate for your environment.
+#
+IMAGE_NAME="cturra/dropbox"
+CONTAINER_NAME="dropbox"
+
+# dropbox data directory
+# ... on docker host (EXTernal)
+EXT_DROPBOX_DATA_DIR="/data/dropbox"
+
+# memory (RAM) upper limit
+# .. units: b, k, m or g.
+MEMORY_LIMIT="512m"
