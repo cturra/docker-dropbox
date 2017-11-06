@@ -13,7 +13,7 @@ Pull and run -- it's this simple.
 # pull from docker hub
 $> docker pull cturra/dropbox
 
-# run radarr
+# run docker
 $> docker run --name=dropbox                     \
               --restart=always                   \
               --detach=true                      \
@@ -30,10 +30,10 @@ Using the `vars` file in this git repo, you can update any of the variables to
 reflect your environment. Once updated, simply execute the `build` then `run` scripts.
 
 ```
-# build radarr
+# build docker
 $> ./build.sh
 
-# run radarr
+# run docker
 $> ./run.sh
 ```
 
