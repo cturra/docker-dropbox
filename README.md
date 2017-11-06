@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="https://img.shields.io/docker/build/cturra/dropbox.svg" /> &nbsp;
+  <img src="https://img.shields.io/docker/pulls/cturra/dropbox.svg" />
+</p>
+
 About this container
 ---
 This container runs the Dropbox Linux client. More about Dropbox can be found at:
