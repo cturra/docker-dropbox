@@ -1,7 +1,7 @@
-FROM debian:stretch
+FROM debian:stretch-slim
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV DROPBOX_VERSION 38.4.27
+ENV DROPBOX_VERSION 39.4.49
 ENV ARCH            86_64
 
 RUN apt-get -q update               \
