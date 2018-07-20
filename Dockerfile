@@ -17,15 +17,15 @@ COPY assets/dropboxd.conf /etc/supervisor/conf.d/dropboxd.conf
 # - https://www.dropbox.com/install?os=lnx
 RUN wget -O /tmp/dropbox.tgz            \
          -q https://clientupdates.dropboxstatic.com/dbx-releng/client/dropbox-lnx.x${ARCH}-${DROPBOX_VERSION}.tar.gz \
- && tar -zxf /tmp/dropbox.tgz -C /root/ \
+ && tar -zxf /tmp/dropbox.tgz -C /dropbox/ \
  && rm -f /tmp/dropbox.tgz
 
 # download the Dropbox python management script
 RUN wget -O /root/dropbox.py \
          -q http://www.dropbox.com/download?dl=packages/dropbox.py
 
-# move .dropbox-dist directory to /dropbox
-RUN mv -f /root/.dropbox-dist /dropbox
+# rename directory to .dropbox-dist for better maintainence
+RUN mv /dropbox/dropbox-lnx.x${ARCH}-${DROPBOX_VERSION} /dropbox/.dropbox-dist
 
 # kick off supervisord+dropbox
 ENTRYPOINT [ "/usr/bin/supervisord" ]
